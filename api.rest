@@ -1,0 +1,140 @@
+### Test the root route
+GET http://localhost:9000/
+
+### Test the document routes
+POST http://localhost:9000/documents
+Content-Type: application/json
+
+{
+  "title": "Sample Document",
+  "content": "This is a sample document."
+}
+
+GET http://localhost:9000/documents
+
+GET http://localhost:9000/documents/1
+
+PUT http://localhost:9000/documents/1
+Content-Type: application/json
+
+{
+  "title": "Updated Document",
+  "content": "This is an updated document."
+}
+
+DELETE http://localhost:9000/documents/1
+
+### Test the garantie routes
+POST http://localhost:9000/garanties
+Content-Type: application/json
+
+{
+  "name": "Sample Garantie",
+  "description": "This is a sample garantie."
+}
+
+GET http://localhost:9000/garanties
+
+GET http://localhost:9000/garanties/1
+
+PUT http://localhost:9000/garanties/1
+Content-Type: application/json
+
+{
+  "name": "Updated Garantie",
+  "description": "This is an updated garantie."
+}
+
+DELETE http://localhost:9000/garanties/1
+
+### Test the paiement routes
+POST http://localhost:9000/paiements
+Content-Type: application/json
+
+{
+  "amount": 100,
+  "date": "2023-10-01"
+}
+
+GET http://localhost:9000/paiements
+
+GET http://localhost:9000/paiements/1
+
+PUT http://localhost:9000/paiements/1
+Content-Type: application/json
+
+{
+  "amount": 150,
+  "date": "2023-10-02"
+}
+
+DELETE http://localhost:9000/paiements/1
+
+### Test the sinistre routes
+POST http://localhost:9000/sinistres
+Content-Type: application/json
+
+{
+  "type": "Accident",
+  "description": "This is a sample sinistre."
+}
+
+GET http://localhost:9000/sinistres
+
+GET http://localhost:9000/sinistres/1
+
+PUT http://localhost:9000/sinistres/1
+Content-Type: application/json
+
+{
+  "type": "Updated Accident",
+  "description": "This is an updated sinistre."
+}
+
+DELETE http://localhost:9000/sinistres/1
+
+### Test the utilisateur routes
+POST http://localhost:9000/utilisateurs
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com"
+}
+
+GET http://localhost:9000/utilisateurs
+
+GET http://localhost:9000/utilisateurs/1
+
+PUT http://localhost:9000/utilisateurs/1
+Content-Type: application/json
+
+{
+  "name": "John Smith",
+  "email": "john.smith@example.com"
+}
+
+DELETE http://localhost:9000/utilisateurs/1
+
+### Test the contrat routes
+POST http://localhost:9000/contrats
+Content-Type: application/json
+
+{
+  "title": "Sample Contrat",
+  "details": "This is a sample contrat."
+}
+
+GET http://localhost:9000/contrats
+
+GET http://localhost:9000/contrats/1
+
+PUT http://localhost:9000/contrats/1
+Content-Type: application/json
+
+{
+  "title": "Updated Contrat",
+  "details": "This is an updated contrat."
+}
+
+DELETE http://localhost:9000/contrats/1
